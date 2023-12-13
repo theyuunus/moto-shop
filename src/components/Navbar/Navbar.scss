@@ -4,7 +4,7 @@
     background: var(--NEU500, #252C33);
 
     .container {
-        width: 95%;
+        width: 90%;
         margin: auto;
     }
 
@@ -54,16 +54,25 @@
                 border: none;
                 border-radius: 15px;
                 background: var(--PGO500, #D3AF37);
-                transition: 0.3s;
                 cursor: pointer;
             }
 
             &-button:hover {
                 color: var(--PGO600, #B69127);
+                padding: 8.5px 28.5px;
                 border: 2px solid var(--PGO600, #B69127);
                 background: var(--NEU100, #FFF);
-                transition: 0.5s;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .navbar {
+
+        .container {
+            width: 98%;
+            margin: auto;
         }
     }
 }
