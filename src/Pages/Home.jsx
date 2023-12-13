@@ -1,7 +1,10 @@
 import React from 'react'
+import Helmet from '../components/Helmet/Helmet'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <Helmet title="Home">
+      <div>Home</div>
+    </Helmet>
   )
 }

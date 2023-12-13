@@ -1,7 +1,10 @@
 import React from 'react'
+import Helmet from '../components/Helmet/Helmet'
 
 export default function Register() {
   return (
-    <div>Register</div>
+    <Helmet title="Register">
+      <div>Register</div>
+    </Helmet>
   )
 }

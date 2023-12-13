@@ -1,7 +1,10 @@
 import React from 'react'
+import Helmet from '../components/Helmet/Helmet'
 
 export default function Login() {
   return (
-    <div>Login</div>
+    <Helmet title="Login">
+      <div>Login</div>
+    </Helmet>
   )
 }
