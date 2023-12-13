@@ -1,0 +1,69 @@
+.navbar {
+    width: 100%;
+    height: 75px;
+    background: var(--NEU500, #252C33);
+
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        justify-content: space-between;
+
+        &-logo {
+
+            &-h1 {
+                color: var(--PGO500, #D3AF37);
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+
+            &-a {
+                color: var(--PGO500, #D3AF37);
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                transition: all 0.3s;
+            }
+
+            &-a:hover {
+                color: var(--PGO600, #B69127);
+                transition: all 0.3s;
+            }
+
+            &-button {
+                color: #000;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                padding: 10px 30px;
+                border: none;
+                border-radius: 15px;
+                background: var(--PGO500, #D3AF37);
+                transition: 0.3s;
+                cursor: pointer;
+            }
+
+            &-button:hover {
+                color: var(--PGO600, #B69127);
+                border: 2px solid var(--PGO600, #B69127);
+                background: var(--NEU100, #FFF);
+                transition: 0.5s;
+            }
+        }
+    }
+}
