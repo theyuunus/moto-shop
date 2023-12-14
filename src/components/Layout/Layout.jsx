@@ -1,6 +1,7 @@
 import React from 'react'
 import Routers from "../../Routers/Routers"
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 export default function Layout() {
     return (
@@ -9,6 +10,7 @@ export default function Layout() {
             <div>
                 <Routers />
             </div>
+            <Footer />
         </React.Fragment>
     )
 }
