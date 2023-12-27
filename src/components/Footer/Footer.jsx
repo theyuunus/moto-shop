@@ -95,9 +95,6 @@ export default function Footer() {
                     </div>
                     <div className='footer-bottom'>
                         <div className='footer-bottom-inner'>
-                            <h3 className='footer-bottom-inner-h3'>
-                                ©2023 by <a href="https://github.com/theyuunus">Yunus</a>. All rights reserved
-                            </h3>
                             <div className='footer-bottom-inner-media'>
                                 <a href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="40" viewBox="0 0 19 40" fill="none">
@@ -134,6 +131,9 @@ export default function Footer() {
                                     </svg>
                                 </a>
                             </div>
+                            <h3 className='footer-bottom-inner-h3'>
+                                ©2023 by <a href="https://github.com/theyuunus">Yunus</a>. All rights reserved
+                            </h3>
                         </div>
                     </div>
                 </div>
