@@ -50,10 +50,8 @@
         display: block;
         height: auto;
         text-align: center;
+        padding: 30px 0;
 
-        &-img{
-            margin-top: 30px;
-        }
     }
 
     .about-info-p{
@@ -76,12 +74,12 @@
 
 @media only screen and (max-width: 410px){
     .about-info-p{
-        width: 290px;
-        margin: auto;
+        width: auto;
+        margin: 0 10px;
     }
 
     .about-img{
-        width: 300px;
+        width: auto;
         height: 200px;
     }
 }
