@@ -1,0 +1,93 @@
+.login {
+    display: flex;
+
+    &-right {
+        width: 800px;    
+
+        &-h1 {
+            color: #FFF;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: absolute;
+            padding: 20px;
+        }
+
+        &-backImg {
+            width: auto;
+            height: 790px;
+            background: url("../../images/LoginImg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0px 85px 85px 0px;
+        }
+    }
+
+    &-left {
+        width: 700px;
+        height: 790px;
+        background: #FFF;
+        padding: 130px 101px;
+        position: relative;
+
+        &-title {
+            color: var(--NEU500, #252C33);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-h3 {
+            color: var(--NEU500, #252C33);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-top: 4px;
+
+            &-span {
+                color: var(--PGO500, #D3AF37);
+                cursor: pointer;
+            }
+        }
+
+        &-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            padding-top: 41px;
+
+            &-input {
+                width: 500px;
+                height: 50px;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #9F9F9F;
+                color: #5A5A5A;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            &-button {
+                color: var(--NEU500, #252C33);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                // width: 285px;
+                margin: auto;
+                padding: 15px 60px;
+                border-radius: 15px;
+                background: var(--PGO500, #D3AF37);
+                border: none;
+                margin-top: 65px;
+                cursor: pointer;
+            }
+        }
+    }
+}
