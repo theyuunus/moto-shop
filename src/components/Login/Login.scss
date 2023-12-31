@@ -2,7 +2,7 @@
     display: flex;
 
     &-right {
-        width: 800px;    
+        width: 800px;
 
         &-h1 {
             color: #FFF;
@@ -60,6 +60,12 @@
             gap: 45px;
             padding-top: 41px;
 
+            &-form {
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+            }
+
             &-input {
                 width: 500px;
                 height: 50px;
@@ -79,7 +85,6 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                // width: 285px;
                 margin: auto;
                 padding: 15px 60px;
                 border-radius: 15px;
@@ -89,5 +94,49 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .login {
+        display: block;
+    }
+
+    .login-right-backImg,
+    .login-right-h1 {
+        display: none;
+    }
+
+    .login-left {
+        width: auto;
+        padding: 130px 30px;
+    }
+
+    .login-right {
+        width: 0;
+    }
+
+    .login-left-inputs-input {
+        width: 400px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .login-left-inputs,
+    .login-left-inputs-input {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .login-left-inputs-input {
+        width: 260px;
+    }
+
+    .login-left {
+        padding: 130px 3px;
     }
 }
