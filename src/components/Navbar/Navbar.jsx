@@ -1,10 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.scss';
+import Person from '../../images/person.jpg'
 
 export default function Navbar() {
     const [isMenuActive, setMenuActive] = useState(false);
     const menuRef = useRef(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState(null);
 
     const closeMenu = () => {
         menuRef.current.classList.remove('menu_active');
@@ -19,6 +22,24 @@ export default function Navbar() {
             setMenuActive(true);
         }
     };
+
+    const checkLoggedInUser = () => {
+        const User = localStorage.getItem('User');
+
+        if (User) {
+            const user = JSON.parse(User);
+            setUser(user);
+            setIsLoggedIn(true);
+        } else {
+            setIsLoggedIn(false);
+            setUser(null);
+        }
+    };
+
+    useEffect(() => {
+        checkLoggedInUser();
+    }, []);
+
     return (
         <React.Fragment>
             <nav className='navbar'>
@@ -53,12 +74,21 @@ export default function Navbar() {
                                     Contact Us
                                 </li>
                             </NavLink>
-                            <NavLink to={"/login"}
-                                onClick={closeMenu}>
-                                <button className='navbar-nav-menu-button'>
-                                    Login
-                                </button>
-                            </NavLink >
+                            {isLoggedIn ? (
+                                <Link to={"/userCobinet"}>
+                                    <img
+                                        src={Person}
+                                        alt="person"
+                                        className='navbar-nav-menu-person_img'
+                                    />
+                                </Link>
+                            ) : (
+                                <Link to={"/login"} onClick={closeMenu}>
+                                    <button className='navbar-nav-menu-button'>
+                                        Login
+                                    </button>
+                                </Link>
+                            )}
                             <div className='app_menu_icon' onClick={toggleMenu}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                                     <path d="M30 5.5L4.0794e-07 5.5" stroke="black" strokeWidth="3" />
