@@ -56,3 +56,23 @@
 
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .main-text {
+        padding: 150px 50px;
+    }
+
+    .main-text-p {
+        width: auto;
+    }
+
+    .main-back_img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .main-text {
+        padding: 150px 0;
+    }
+}
