@@ -1,8 +1,74 @@
-.showroom{
+.showroom {
     width: 100%;
     height: 100%;
     background-image: url("../../images/ShowroomBackround.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    &-moto_section {
+        background-color: #fff;
+        margin: 50px 100px;
+        padding: 13px;
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            &-card {
+                width: 273px;
+                padding: 13px;
+                border-radius: 10px;
+                background: var(--NEU500, #252C33);
+
+                &-img {
+                    width: 246px;
+                    height: 147px;
+                    border-radius: 10px;
+                }
+
+                &-h3 {
+                    width: 190px;
+                    color: var(--PGO500, #D3AF37);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                &-h2 {
+                    color: var(--PGO500, #D3AF37);
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 10px 0 30px;
+                }
+
+                &-p {
+                    color: var(--PGO500, #D3AF37);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                &-button {
+                    color: var(--NEU500, #252C33);
+                    text-align: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-radius: 10px;
+                    background: var(--PGO500, #D3AF37);
+                    border: none;
+                    padding: 10px 30px;
+                    cursor: pointer;
+                    margin-top: 35px;
+                }
+            }
+        }
+    }
 }
