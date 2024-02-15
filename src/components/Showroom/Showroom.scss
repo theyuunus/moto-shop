@@ -5,22 +5,23 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 50px 100px;
 
     &-moto_section {
         background-color: #fff;
-        margin: 50px 100px;
-        padding: 13px;
+        padding: 20px 0;
 
         &-cards {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+
 
             &-card {
                 width: 273px;
                 padding: 13px;
                 border-radius: 10px;
                 background: var(--NEU500, #252C33);
+                margin: auto;
 
                 &-img {
                     width: 246px;

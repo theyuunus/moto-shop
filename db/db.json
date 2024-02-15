@@ -53,36 +53,36 @@
       "img": "moto1.png",
       "type": "Suzuki GSX-R1000 (2004)",
       "status": "Used",
-      "price": "6,899",
+      "price": "$6,899",
       "stock": 1,
       "colors": "Blue/White"
     },
     {
       "id": 2,
-      "img": "moto1.png",
-      "type": "Suzuki GSX-R1000 (2004)",
-      "status": "Used",
-      "price": "6,899",
+      "img": "moto2.png",
+      "type": "Triumph Street Triple R (2020)",
+      "status": "New",
+      "price": "$12,499",
       "stock": 1,
-      "colors": "Blue/White"
+      "colors": "Black"
     },
     {
       "id": 3,
-      "img": "moto1.png",
-      "type": "Suzuki GSX-R1000 (2004)",
-      "status": "Used",
-      "price": "6,899",
-      "stock": 1,
-      "colors": "Blue/White"
+      "img": "moto3.png",
+      "type": "Kawasaki Versys 650 (2020)",
+      "status": "New",
+      "price": "$8,299",
+      "stock": 5,
+      "colors": "Green/White"
     },
     {
       "id": 4,
-      "img": "moto1.png",
-      "type": "Suzuki GSX-R1000 (2004)",
+      "img": "moto4.png",
+      "type": "Ducati 1199 Panigale (2012)",
       "status": "Used",
-      "price": "6,899",
-      "stock": 1,
-      "colors": "Blue/White"
+      "price": "$12,499 - $12,999",
+      "stock": 2,
+      "colors": "Glossy Red/Tricolore"
     }
   ]
 }
