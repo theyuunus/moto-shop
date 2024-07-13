@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Inter;
+}
+
+:root {
+    --primary: "#D3AF37",
+        --secondary: "#252C33",
+        --white: "#FFFFFF"
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+label,
+textarea,
+a {
+    cursor: pointer;
+}
