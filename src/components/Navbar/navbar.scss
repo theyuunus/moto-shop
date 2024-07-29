@@ -1,0 +1,36 @@
+.navbar {
+    padding: 20px 0;
+    background-color: var(--secondary);
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        text-decoration: none;
+    }
+
+    &__links {
+        display: flex;
+        column-gap: 50px;
+        align-items: center;
+
+        .active{
+            color: rgba(182, 145, 39, 1);
+        }
+    }
+
+    &__link {
+        color: var(--primary);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        text-decoration: none;
+    }
+
+    &__button {
+        text-decoration: none;
+    }
+}

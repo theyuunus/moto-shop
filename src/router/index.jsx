@@ -9,6 +9,7 @@ import Profile from '@pages/profile/profile';
 import Login from '@pages/login/login';
 import Register from '@pages/register/register';
 import NotFound from '@pages/not-found/not-found';
+import Design from '@pages/design/design';
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register />
+            },
+            {
+                path: 'design',
+                element: <Design />
             },
             {
                 path: '*',
