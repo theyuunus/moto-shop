@@ -12,10 +12,12 @@ body {
 }
 
 :root {
-    --primary: "#D3AF37",
-        --secondary: "#252C33",
-        --white: "#FFFFFF"
+    --primary: rgb(211, 175, 55);
+    --secondary: rgb(37, 44, 51);
+    --white: rgba(255, 255, 255, 1);
+    --black: rgb(0, 0, 0);
 }
+
 
 a {
     text-decoration: none;
