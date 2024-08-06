@@ -1,10 +1,15 @@
 import React from 'react'
 import './login.scss'
+import { Helmet } from 'react-helmet'
 
 const Login = () => {
     return (
         <>
-            Login
+            <Helmet>
+                <title>Moto - Login</title>
+            </Helmet>
+            
+            <h1>Login</h1>
         </>
     )
 }
