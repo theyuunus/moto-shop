@@ -1,10 +1,15 @@
 import React from 'react'
 import './home.scss'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
     return (
         <>
-            home
+            <Helmet>
+                <title>Moto - Home</title>
+            </Helmet>
+            
+            <h1>home</h1>
         </>
     )
 }
