@@ -1,7 +1,6 @@
 import React from 'react'
 import './not-found.scss'
-import Title from '../../components/texts/title'
-import Text from '../../components/texts/text'
+import Components from '../../components'
 import { Link } from 'react-router-dom'
 import notFound from '../../images/not-found.png'
 import { Helmet } from 'react-helmet'
@@ -16,21 +15,23 @@ const NotFound = () => {
             <div className='notFound'>
                 <div className='notFound-content'>
                     <div className='notFound-titles'>
-                        <Title
-                            color='rgba(37, 44, 51, 1)' className='notFound-title'
-                        >Oops....</Title>
-                        <Title
+                        <Components.Typography
                             color='rgba(37, 44, 51, 1)'
-                            as='h2'
+                            className='notFound-title'
+                            name='h1'
+                        >Oops....</Components.Typography>
+                        <Components.Typography
+                            color='rgba(37, 44, 51, 1)'
+                            name='h2'
                             className='notFound-subtitle'
-                        >Page not found</Title>
+                        >Page not found</Components.Typography>
                     </div>
 
-                    <Text
+                    <Components.Typography
                         color='rgba(37, 44, 51, 1)'
                         className='notFound-text'
                     >Unfortunately, the page you’re looking for is either under maintenance, unaccessible, or there’s a server problem in our site. Please go back to home page.
-                    </Text>
+                    </Components.Typography>
 
                     <Link to="/" className='notFound-link'>
                         Go back to Home

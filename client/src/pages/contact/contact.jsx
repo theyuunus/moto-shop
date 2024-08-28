@@ -1,10 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Title from '../../components/texts/title';
-import Text from '../../components/texts/text';
-import LocationImg from '../../images/contact-location.png';
-import Button from '../../components/button/button';
 import './contact.scss';
+import Components from '../../components';
+import LocationImg from '../../images/contact-location.png';
 
 const Contact = () => {
     return (
@@ -17,12 +15,12 @@ const Contact = () => {
                 <img src={LocationImg} alt="Location" className="contact__image" />
 
                 <div className="contact__info">
-                    <Title>Contact Us</Title>
+                    <Components.Typography name='h1'>Contact Us</Components.Typography>
 
-                    <Text color="rgb(37, 44, 51)" fontSize={22}>
+                    <Components.Typography color="rgb(37, 44, 51)" fontSize={22}>
                         2005 Broken Dream Blvd <br />
                         Daytona Beach, FL 32122
-                    </Text>
+                    </Components.Typography>
 
                     <a href="tel:34375092453" className="contact__info-text">
                         (343)-7509-2453
@@ -52,9 +50,9 @@ const Contact = () => {
                             required
                         ></textarea>
 
-                        <Button className="contact__info-form-button">
+                        <Components.Button className="contact__info-form-button">
                             Send
-                        </Button>
+                        </Components.Button>
                     </form>
                 </div>
             </div>

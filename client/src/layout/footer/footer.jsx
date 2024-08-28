@@ -1,21 +1,19 @@
 import React from 'react';
 import './footer.scss';
-import Container from '../container/container';
-import Title from '../texts/title';
-import Text from '../texts/text';
+import Components from '../../components/index';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <Container>
+            <Components.Container>
                 <div className="footer__main">
                     <section className="footer__section">
-                        <Title>two wheelers</Title>
-                        <Text>
+                        <Components.Typography name='h1'>two wheelers</Components.Typography>
+                        <Components.Typography>
                             2005 Broken Dream Blvd <br />
                             Daytona Beach, FL 32122
-                        </Text>
+                        </Components.Typography>
                         <a href="tel:(343)-7509-2453" className="footer__link">
                             (343)-7509-2453
                         </a>
@@ -58,21 +56,21 @@ const Footer = () => {
                     </section>
 
                     <section className="footer__section">
-                        <Title>STORE HOURS</Title>
-                        <Text>
+                        <Components.Typography name='h3'>STORE HOURS</Components.Typography>
+                        <Components.Typography>
                             Weekdays: 8 AM - 3 PM <br /><br />
                             Saturday: 8 AM - 2 PM <br /><br />
                             Sunday/National Holiday: Closed
-                        </Text>
+                        </Components.Typography>
                     </section>
                 </div>
 
                 <div className="footer__bottom">
-                    <Text>
+                    <Components.Typography>
                         &copy; {new Date().getFullYear()} TwoWheelers.com. All rights reserved
-                    </Text>
+                    </Components.Typography>
                 </div>
-            </Container>
+            </Components.Container>
         </footer>
     );
 };

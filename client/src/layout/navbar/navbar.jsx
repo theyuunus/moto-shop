@@ -1,17 +1,15 @@
 import React from 'react';
 import './navbar.scss';
+import Components from '../../components/index';
 import { Link, NavLink } from 'react-router-dom';
-import Title from '../texts/title';
-import Container from '../container/container';
-import Button from '../button/button';
 
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <Container>
+            <Components.Container>
                 <div className="navbar__main">
                     <Link to="/" className="navbar__logo">
-                        <Title>two wheelers</Title>
+                        <Components.Typography name='h1'>two wheelers</Components.Typography>
                     </Link>
 
                     <div className="navbar__links">
@@ -28,11 +26,11 @@ const Navbar = () => {
                             Contact Us
                         </NavLink>
                         <Link to="/login" className="navbar__button">
-                            <Button>Login</Button>
+                            <Components.Button>Login</Components.Button>
                         </Link>
                     </div>
                 </div>
-            </Container>
+            </Components.Container>
         </nav>
     );
 };
