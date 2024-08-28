@@ -13,7 +13,7 @@ const Button = ({
     return (
         <>
             <button
-                className={`${ButtonStyle.button} ${className}`}
+                className={`${ButtonStyle["button"]} ${className}`}
                 type={type}
                 style={{ fontSize: fontSize, fontWeight: fontWeight }}
                 onClick={onClick}

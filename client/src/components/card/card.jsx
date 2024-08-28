@@ -1,9 +1,7 @@
 import React from 'react';
 import CardStyles from './card.module.scss';
-import Title from '../texts/title';
-import Text from '../texts/text';
+import Components from '../index';
 import Notfound from '../../images/card404.avif'
-import Button from '../button/button';
 
 const Card = ({
     className,
@@ -25,20 +23,20 @@ const Card = ({
             />
 
             <div className={CardStyles["div"]}>
-                <Title className={CardStyles["title"]}>{title}</Title>
-                <Text className={CardStyles["type"]}>{type}</Text>
+                <Components.Typography name='h1' className={CardStyles["title"]}>{title}</Components.Typography>
+                <Components.Typography className={CardStyles["type"]}>{type}</Components.Typography>
             </div>
 
-            <Title as='h2' className={CardStyles.price}>${price}</Title>
+            <Components.Typography name='h2' className={CardStyles["price"]}>${price}</Components.Typography>
 
             <div className={CardStyles["div"]}>
-                <Text>Stock: {stock}</Text>
-                <Text>Color(s): <br /> {color}</Text>
+                <Components.Typography>Stock: {stock}</Components.Typography>
+                <Components.Typography>Color(s): <br /> {color}</Components.Typography>
             </div>
 
-            <Button className={CardStyles["button"]}>
+            <Components.Button className={CardStyles["button"]}>
                 Details
-            </Button>
+            </Components.Button>
         </div>
     );
 }

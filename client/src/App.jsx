@@ -1,11 +1,10 @@
 import React from 'react';
-import Navbar from '@components/navbar/Navbar';
 import { Outlet } from 'react-router-dom';
-import Footer from '@components/footer/Footer';
+import Navbar from './layout/navbar/navbar';
+import Footer from './layout/footer/footer';
 
 function App() {
   console.clear();
-
   return (
     <>
       <Navbar />
