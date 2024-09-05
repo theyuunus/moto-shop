@@ -11,8 +11,32 @@
         max-width: 1200px;
         width: 100%;
         background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
         margin: auto;
         padding: 16px;
+
+        &-search {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            background-color: var(--secondary);
+            border-radius: 10px;
+            padding: 39px 46px;
+
+            &-input {
+                width: 40%;
+                height: 40px;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 17px;
+                border: none;
+                outline: none;
+                padding: 0 10px;
+            }
+        }
 
         &-cards {
             display: grid;
