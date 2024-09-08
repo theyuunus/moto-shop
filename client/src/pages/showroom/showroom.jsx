@@ -5,53 +5,40 @@ import { fetchData } from '../../services/api';
 import Components from '../../components';
 
 const Showroom = () => {
-    // const [data, setData] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
-    // const [filteredData, setFilteredData] = useState([]);
-    // const [searchTerm, setSearchTerm] = useState('');
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [filteredData, setFilteredData] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
-    // useEffect(() => {
-    //     const loadData = async () => {
-    //         try {
-    //             const response = await fetchData('/');
-    //             setData(response);
-    //             setFilteredData(response);
-    //         } catch (err) {
-    //             setError(err.message);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
+    useEffect(() => {
+        const loadData = async () => {
+            try {
+                const response = await fetchData('/motos');
+                setData(response);
+                setFilteredData(response);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    //     loadData();
-    // }, []);
+        loadData();
+    }, []);
 
-    // const handleSearch = (event) => {
-    //     const searchTerm = event.target.value.toLowerCase();
-    //     setSearchTerm(searchTerm);
+    const handleSearch = (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        setSearchTerm(searchTerm);
 
-    //     const filtered = data.filter((item) =>
-    //         item.title.toLowerCase().includes(searchTerm)
-    //     );
-    //     setFilteredData(filtered);
-    // };
+        const filtered = data.filter((item) =>
+            item.title.toLowerCase().includes(searchTerm)
+        );
+        setFilteredData(filtered);
+    };
 
-    // if (loading) {
-    //     return (
-    //         <Components.Typography name="h1" className="loading">
-    //             Loading ...
-    //         </Components.Typography>
-    //     );
-    // }
-
-    // if (error) {
-    //     return (
-    //         <Components.Typography name="h1" className="error">
-    //             Error: {error}
-    //         </Components.Typography>
-    //     );
-    // }
+    if (loading) return <Components.Typography name='h1' className={"loading"}>Loading ...</Components.Typography>
+    if (error) return <Components.Typography name='h1' className={"error"}>Error: {error}</Components.Typography>
 
     return (
         <>
@@ -70,25 +57,25 @@ const Showroom = () => {
                             type="text"
                             placeholder="Search Moto"
                             className="showroom__context-search-input"
-                        // value={searchTerm}
-                        // onChange={handleSearch}
+                            value={searchTerm}
+                            onChange={handleSearch}
                         />
                     </div>
 
                     <div className="showroom__context-cards">
-                        {/* {filteredData.map((item) => (
+                        {filteredData.map((item) => (
                             <Components.Card
                                 key={item.id}
-                                img={"image of card"}
+                                img={item.img}
                                 imgTitle={item.title}
                                 title={item.title}
                                 type={item.type}
                                 price={item.price}
                                 stock={item.stock}
                                 color={item.color}
-                                link={"#"}
+                                link={`/showroom/details/${item.id}`}
                             />
-                        ))} */}
+                        ))}
                     </div>
                 </div>
             </div>

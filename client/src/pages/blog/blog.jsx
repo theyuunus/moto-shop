@@ -5,17 +5,17 @@ import Components from '../../components'
 import { fetchData } from '../../services/api'
 
 const Blog = () => {
-    const [data, setData] = useState([0])
+    const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await fetchData('/')
+                const response = await fetchData('/blogs')
                 setData(response)
             } catch (err) {
-                setError(err.massage)
+                setError(err.message)
             } finally {
                 setLoading(false)
             }
@@ -34,41 +34,41 @@ const Blog = () => {
 
             <div className='blog'>
                 <article className='blog__context'>
-                    {/* {data.map((item) => { */}
-                    <div className='blog__context-card'>
-                        <img
-                            src="Blog img"
-                            alt="Images of blog"
-                            className='blog__context-card-img'
-                        />
+                    {data.map((blog) => (
+                        <div className='blog__context-card' key={blog.id}>
+                            <img
+                                src={blog.img}
+                                alt="Images of blog"
+                                className='blog__context-card-img'
+                            />
 
-                        <div className='blog__context-card-texts'>
-                            <div className='blog__context-card-texts-div'>
-                                <Components.Typography
-                                    name='h1'
-                                    className='blog__context-card-texts-title'
-                                    color='#252C33'
-                                >
-                                    {/* Blog Title */}
-                                </Components.Typography>
+                            <div className='blog__context-card-texts'>
+                                <div className='blog__context-card-texts-div'>
+                                    <Components.Typography
+                                        name='h1'
+                                        className='blog__context-card-texts-title'
+                                        color='#252C33'
+                                    >
+                                        {blog.title}
+                                    </Components.Typography>
+
+                                    <Components.Typography
+                                        className='blog__context-card-texts-text'
+                                        color='#252C33'
+                                    >
+                                        {blog.date}
+                                    </Components.Typography>
+                                </div>
 
                                 <Components.Typography
                                     className='blog__context-card-texts-text'
                                     color='#252C33'
                                 >
-                                    {/* Blog Date */}
+                                    {blog.text}
                                 </Components.Typography>
                             </div>
-
-                            <Components.Typography
-                                className='blog__context-card-texts-text'
-                                color='#252C33'
-                            >
-                                {/* Blog Text */}
-                            </Components.Typography>
                         </div>
-                    </div>
-                    {/* })} */}
+                    ))}
                 </article>
             </div>
         </>
