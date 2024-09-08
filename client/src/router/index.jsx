@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App'
 import Home from '../pages/home/home';
 import Showroom from '../pages/showroom/showroom';
+import Details from '../pages/details/details';
 import Blog from '../pages/blog/blog';
 import Contact from '../pages/contact/contact';
 import Profile from '../pages/profile/profile';
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: 'showroom',
                 element: <Showroom />
+            },
+            {
+                path: `showroom/details/:id`,
+                element: <Details />
             },
             {
                 path: 'blog',

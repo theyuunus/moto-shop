@@ -18,7 +18,7 @@
         &-card {
             display: flex;
             column-gap: 35px;
-            align-items: center;
+            align-items: self-start;
             border-bottom: 1px solid #252C33;
             padding: 40px 0;
 
@@ -30,7 +30,7 @@
 
             &-texts {
 
-                &-div{
+                &-div {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;

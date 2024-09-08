@@ -1,0 +1,22 @@
+{
+    "motos": [
+        {
+            "id": 1,
+            "img": "/images/moto-1.png",
+            "title": "Suzuki GSX-R1000 (2004)",
+            "type": "Used",
+            "price": "6,899",
+            "stock": 1,
+            "color": "Blue/White"
+        }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "img": "/images/blog-1.png",
+            "title": "Blog Title",
+            "date": "10/7/2024",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vero odit, excepturi laudantium sunt facilis, porro quasi incidunt beatae inventore error nemo tempore facere corrupti ea quod dolorem. Veritatis, est nam. In nam, qui reiciendis quibusdam voluptatibus asperiores corporis doloribus repellat perferendis libero, quia inventore. Voluptate veritatis maiores porro quae?"
+        }
+    ]
+}
